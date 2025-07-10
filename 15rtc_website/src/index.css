@@ -4,63 +4,12 @@
 :root {
   font-family: "Jacques Francois", serif;
   background-color: #090909;
+  min-height: 100vh;
+  scrollbar-width: none;
 }
 
 p {
   color: #ECDCBD;
-  margin-left: 0.25rem;
-}
-
-.headerWrapper {
-  height: 10rem;
-  display: flex;
-  align-items: center;
-}
-
-.logoWrapper {
-  height: 95%;
-  max-width: 12%;
-  margin-left: 1.5rem;
-  margin-top: 1.5rem;
-  display: flex;
-  align-items: center;
-}
-
-.logoWrapper img {
-  width: 100%;
-  height: auto;
-}
-
-.slogan_buttons_wrapper {
-  height: 90%;
-  width: 25%;
-  margin: auto 0.5rem 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.25rem;
-}
-
-.slogan {
-  text-align: left;
-}
-
-.platform_links {
-  display: flex;
-}
-
-.platform_links a {
-  display: flex;
-  flex: 1;
-  justify-content: left;
-}
-
-.platform_links img {
-  max-width: 90%;
-}
-
-.platform_links img:hover {
-  transform: scale(1.1);
 }
 
 .breakline {
@@ -68,5 +17,10 @@ p {
   width: 100%;
   height: 1px;
   background: radial-gradient(#ECDCBD 20%, #090909);
-  margin-top: 1.5rem;
+}
+
+.breakline {
+  position: sticky;
+  z-index: 50;
+  top: 0;
 }

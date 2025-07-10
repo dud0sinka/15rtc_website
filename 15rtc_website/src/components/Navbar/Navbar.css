@@ -1,0 +1,36 @@
+.navbar {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #2F1110;
+    position: sticky;
+    z-index: 50;
+    top: 0;
+}
+
+.navbar div {
+    height: 95%;
+    border: 0px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar div a {
+    color: #ECDCBD;
+}
+
+.navbar div a:hover {
+    font-size: 18px;
+    padding-bottom: 3px;
+    animation: text-shadow-animation 0.15s ease-in forwards;
+}
+
+@keyframes text-shadow-animation {
+    100% {
+        text-shadow: 0 0 5px #e4ca97;
+    }
+}

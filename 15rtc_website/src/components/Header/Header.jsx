@@ -1,7 +1,8 @@
-import logo from "../assets/15RtCh_beige.png";
-import yt_button from "../assets/yt.png";
-import spotify_button from "../assets/spotify.png";
-import apple_button from "../assets/apple.png";
+import logo from "../../assets/15RtCh_beige.png";
+import yt_button from "../../assets/yt.png";
+import spotify_button from "../../assets/spotify.png";
+import apple_button from "../../assets/apple.png";
+import "./Header.css";
 
 const Header = () => {
   const yt_link = "https://www.youtube.com/channel/UC4aKPSJl5OapD0vr2hajzbg";
@@ -12,8 +13,8 @@ const Header = () => {
 
   return (
     <>
-      <div className="headerWrapper">
-        <div className="logoWrapper">
+      <div className="header_wrapper">
+        <div className="logo_wrapper">
           <img src={logo} alt="15RTC Logo" className="logo" />
         </div>
         <div className="slogan_buttons_wrapper">
@@ -47,7 +48,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="breakline" />
+      <div className="breakline header-breakline" />
     </>
   );
 };
