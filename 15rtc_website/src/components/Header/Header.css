@@ -22,6 +22,11 @@ p {
   height: auto;
 }
 
+.logo_wrapper img:hover {
+  cursor: pointer;
+  transform: scale(1.025);
+}
+
 .slogan_buttons_wrapper {
   height: 90%;
   width: 25%;

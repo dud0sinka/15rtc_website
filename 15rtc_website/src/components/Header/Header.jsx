@@ -31,7 +31,12 @@ const Header = ({ setIsHeaderVisible }) => {
     <>
       <div className="header" id="home" ref={ref}>
         <div className="logo_wrapper">
-          <img src={logo} alt="15RTC Logo" className="logo" />
+          <img
+            src={logo}
+            alt="15RTC Logo"
+            className="logo"
+            onClick={() => meme()}
+          />
         </div>
         <div className="slogan_buttons_wrapper">
           <div className="slogan">
@@ -67,5 +72,17 @@ const Header = ({ setIsHeaderVisible }) => {
     </>
   );
 };
+
+let lastPlayed = 0;
+
+function meme() {
+  const now = Date.now();
+
+  if (now - lastPlayed >= 7000) {
+    const audio = new Audio("/meme.mp3");
+    audio.play();
+    lastPlayed = now;
+  }
+}
 
 export default Header;
