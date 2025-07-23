@@ -2,7 +2,7 @@ p {
   margin-left: 0.25rem;
 }
 
-.header_wrapper {
+.header {
   height: 10rem;
   display: flex;
   align-items: center;
@@ -52,8 +52,4 @@ p {
 
 .platform_links img:hover {
   transform: scale(1.1);
-}
-
-.header-breakline {
-  margin-top: 1.5rem;
 }

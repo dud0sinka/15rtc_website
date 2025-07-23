@@ -6,21 +6,9 @@
   background-color: #090909;
   min-height: 100vh;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 p {
   color: #ECDCBD;
-}
-
-.breakline {
-  color: #ECDCBD;
-  width: 100%;
-  height: 1px;
-  background: radial-gradient(#ECDCBD 20%, #090909);
-}
-
-.breakline {
-  position: sticky;
-  z-index: 50;
-  top: 0;
 }

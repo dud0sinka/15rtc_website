@@ -8,7 +8,8 @@
     background-color: #2F1110;
     position: sticky;
     z-index: 50;
-    top: 0;
+    top: 1px;
+    margin-top: 20px;
 }
 
 .navbar div {
@@ -19,14 +20,33 @@
     justify-content: center;
 }
 
-.navbar div a {
+.navbar div button {
     color: #ECDCBD;
 }
 
-.navbar div a:hover {
+.navbar div button:hover {
     font-size: 18px;
     padding-bottom: 3px;
     animation: text-shadow-animation 0.15s ease-in forwards;
+    cursor: pointer;
+}
+
+.navbar::before,
+.navbar::after {
+    content: '';
+    height: 1px;
+    background: radial-gradient(#ECDCBD 20%, #090909);
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.navbar::before {
+    top: -1px;
+}
+
+.navbar::after {
+    bottom: -1px;
 }
 
 @keyframes text-shadow-animation {

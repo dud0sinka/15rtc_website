@@ -1,0 +1,4 @@
+.store {
+    min-height: calc(100vh - 3rem);
+    border: 1px solid red;
+}

@@ -4,28 +4,38 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <div className="home">
-          <a href="">HOME</a>
+        <div>
+          <button onClick={() => scrollToSection("home")}>HOME</button>
         </div>
-        <div className="discography">
-          <a href="">DISCOGRAPHY</a>
+        <div>
+          <button onClick={() => scrollToSection("discography")}>
+            DISCOGRAPHY
+          </button>
         </div>
-        <div className="shows">
-          <a href="">SHOWS</a>
+        <div>
+          <button onClick={() => scrollToSection("shows")}>SHOWS</button>
         </div>
-        <div className="store">
-          <a href="">STORE</a>
+        <div>
+          <button onClick={() => scrollToSection("store")}>STORE</button>
         </div>
-        <div className="about">
-          <a href="">ABOUT</a>
+        <div>
+          <button onClick={() => scrollToSection("gallery")}>GALLERY</button>
         </div>
-        <div className="sunlit_sorrows">
-          <a href="">SUNLIT SORROWS</a>
+        <div>
+          <button onClick={() => scrollToSection("about")}>ABOUT</button>
+        </div>
+        <div>
+          <button onClick={() => scrollToSection("sunlitsorrows")}>
+            SUNLIT SORROWS
+          </button>
         </div>
       </nav>
-      <div className="breakline navbar-breakline" />
     </>
   );
 };
 
 export default Navbar;
+
+export function scrollToSection(elementName) {
+  document.getElementById(elementName)?.scrollIntoView(false);
+}

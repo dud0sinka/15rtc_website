@@ -13,9 +13,14 @@ const Header = () => {
 
   return (
     <>
-      <div className="header_wrapper">
+      <div className="header" id="home">
         <div className="logo_wrapper">
-          <img src={logo} alt="15RTC Logo" className="logo" />
+          <img
+            onClick={() => scrollToSection("home")}
+            src={logo}
+            alt="15RTC Logo"
+            className="logo"
+          />
         </div>
         <div className="slogan_buttons_wrapper">
           <div className="slogan">
@@ -48,7 +53,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="breakline header-breakline" />
     </>
   );
 };
