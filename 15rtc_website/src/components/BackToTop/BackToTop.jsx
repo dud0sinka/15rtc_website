@@ -1,5 +1,5 @@
 import "./BackToTop.css";
-import { scrollToSection } from "../Navbar/Navbar";
+import { scrollToSection } from "../../utils/scrollToSection";
 import { useState, useEffect } from "react";
 
 const BackToTop = () => {
@@ -7,7 +7,7 @@ const BackToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      window.scrollY > 250 ? setVisible(true) : setVisible(false);
+      window.scrollY > 500 ? setVisible(true) : setVisible(false);
     };
 
     window.addEventListener("scroll", toggleVisibility);

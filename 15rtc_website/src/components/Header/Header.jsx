@@ -3,24 +3,35 @@ import yt_button from "../../assets/yt.png";
 import spotify_button from "../../assets/spotify.png";
 import apple_button from "../../assets/apple.png";
 import "./Header.css";
+import { useEffect, useRef } from "react";
 
-const Header = () => {
-  const yt_link = "https://www.youtube.com/channel/UC4aKPSJl5OapD0vr2hajzbg";
-  const spotify_link =
-    "https://open.spotify.com/artist/3gc5uUgqm0TtXTh9ySOlGp?si=RQ2V4ZzXTxyj_uHujBx0Fg";
-  const apple_link =
-    "https://music.apple.com/us/artist/fifteen-reasons-to-change/1808511375";
+export const yt_link =
+  "https://www.youtube.com/channel/UC4aKPSJl5OapD0vr2hajzbg";
+export const spotify_link =
+  "https://open.spotify.com/artist/3gc5uUgqm0TtXTh9ySOlGp?si=RQ2V4ZzXTxyj_uHujBx0Fg";
+export const apple_link =
+  "https://music.apple.com/us/artist/fifteen-reasons-to-change/1808511375";
+
+const Header = ({ setIsHeaderVisible }) => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        setIsHeaderVisible(entry.isIntersecting);
+      });
+    });
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
-      <div className="header" id="home">
+      <div className="header" id="home" ref={ref}>
         <div className="logo_wrapper">
-          <img
-            onClick={() => scrollToSection("home")}
-            src={logo}
-            alt="15RTC Logo"
-            className="logo"
-          />
+          <img src={logo} alt="15RTC Logo" className="logo" />
         </div>
         <div className="slogan_buttons_wrapper">
           <div className="slogan">

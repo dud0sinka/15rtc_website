@@ -4,31 +4,12 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #2F1110;
     position: sticky;
     z-index: 50;
     top: 1px;
     margin-top: 20px;
-}
-
-.navbar div {
-    height: 95%;
-    border: 0px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar div button {
-    color: #ECDCBD;
-}
-
-.navbar div button:hover {
-    font-size: 18px;
-    padding-bottom: 3px;
-    animation: text-shadow-animation 0.15s ease-in forwards;
-    cursor: pointer;
 }
 
 .navbar::before,
@@ -47,6 +28,89 @@
 
 .navbar::after {
     bottom: -1px;
+}
+
+.left_section {
+    flex: 1;
+}
+
+.middle_section {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex: 2;
+}
+
+.middle_section div, .small_platform_links div {
+    height: 95%;
+    border: 0px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle_section div button, .small_platform_links div a {
+    font-size: 18px;
+    transform: scale(0.86);
+    color: #ECDCBD;
+    transition: text-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.middle_section div button:hover, .small_platform_links div a:hover{
+    transform: scale(1);
+    text-shadow: 0 0 5px #e4ca97;
+    cursor: pointer;
+}
+
+.right_section {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.small_platform_links {
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding-right: 1rem;
+    transition: opacity 0.2s ease-in;
+}
+
+.small_platform_links a {
+    display: flex;
+    flex: 1;
+}
+
+.middle_section div button.active {
+    text-shadow: 0 0 5px #e4ca97;
+}
+
+.middle_section div button::before,
+.middle_section div button::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: radial-gradient(#e2cca1 10%, #090909);
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.middle_section div button::before {
+    left: -6px;
+}
+
+.middle_section div button::after {
+    right: -6px;
+}
+
+.middle_section div button.active:before, .middle_section div button.active::after {
+    opacity: 1;
 }
 
 @keyframes text-shadow-animation {
